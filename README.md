@@ -25,6 +25,7 @@ Episódios sendo Assistidos,
 Temporadas finalizadas,
 Anime concluído, 
 Tempo total de tempo assistido. 
+Gerar GIFs com a API. 
 
 O site faz isso e um pouco mais, seria mais interessante você testar e me dizer o que achou. 
 
