@@ -1,0 +1,81 @@
+﻿@model Anime.Models.Animes
+
+
+@{
+    ViewBag.Title = "AdicionarAnime";
+    Layout = "~/Views/Shared/_LayoutADM.cshtml";
+
+}
+
+<h2>AdicionarAnime</h2>
+@using (Html.BeginForm("AdicionarAnime", "Admin", FormMethod.Post, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
+{
+<div class="form-horizontal">
+    <h4>Animes</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        <!--  Nome -->
+        @Html.LabelFor(model => model.NomeAnime, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.NomeAnime, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.NomeAnime, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <!--  Estudio -->
+    <div class="form-group">
+        @Html.LabelFor(model => model.Estudio, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Estudio, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Estudio, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <!-- Categoria -->
+
+    <div class="form-group">
+        @Html.Label("Categorias", new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownList("Categorias", null,
+                " -- SELECIONE -- ",
+                new { @class = "form-control" })
+        </div>
+    </div>
+
+    <!--  Duração -->
+    <div class="form-group">
+        @Html.LabelFor(model => model.Duracao, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Duracao, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Duracao, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <!--  Imagem -->
+    <div id="Imagem" class="form-group">
+        @Html.Label("Imagem", new { @class = "control-label col-sm-2" })
+        <div class="col-sm-10">
+            <input type="file" id="AnimeImagem" name="AnimeImagem"
+                   class="form-control-file" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <!--  Descricao -->
+        @Html.LabelFor(model => model.Descricao, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Descricao, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Descricao, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <!-- Submit -->
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Adicionar" class="btn btn-dark mx-auto" />
+        </div>
+    </div>
+
+</div>
+}
+

@@ -1,0 +1,621 @@
+﻿.btn {
+    height: 37px;
+    width: 37px;
+    background-image: url("~/Imagem/BibliotecaAnimeImgsvg.svg");
+    background-repeat: no-repeat;
+}
+
+.ir {
+    height: 37px;
+    width: 37px;
+    background: transparent url("~/Imagem/BibliotecaAnimeImgsvg.svg");
+    no-repeat;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+    .ir:before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 150%;
+    }
+
+.table, th, td {
+    border: 1px solid black;
+}
+
+.th, td {
+    width: 100px;
+}
+
+.th {
+    text-align: left;
+}
+
+.tw-pd-y-2 {
+    padding-bottom: 2rem !important;
+    padding-top: 2rem !important;
+}
+
+.settings-root__content {
+    max-width: 90rem;
+}
+
+.tw-pd-x-3 {
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+}
+
+.tw-flex-column {
+    flex-direction: column !important;
+}
+
+.tw-flex-nowrap {
+    flex-wrap: nowrap !important;
+}
+
+.tw-flex {
+    display: flex !important;
+}
+
+.tw-full-height {
+    height: 100% !important;
+}
+
+.tw-full-width {
+    width: 100% !important;
+}
+
+.tw-relative {
+    position: relative !important;
+}
+
+.tw-full-width {
+    width: 100% !important;
+}
+
+.root-scrollable__content {
+    display: flex;
+}
+
+.simplebar-content {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    min-height: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.simplebar-content {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    min-height: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.tw-mg-b-2 {
+    margin-bottom: 2rem !important;
+}
+
+.tw-flex-row {
+    flex-direction: row !important;
+}
+
+.tw-flex {
+    display: flex !important;
+}
+
+.tw-mg-r-2 {
+    margin-right: 2rem !important;
+}
+
+.tw-relative {
+    position: relative !important;
+}
+
+.tw-flex-row {
+    flex-direction: row !important;
+}
+
+.tw-flex {
+    display: flex !important;
+}
+
+.tw-mg-r-2 {
+    margin-right: 2rem !important;
+}
+
+.tw-relative {
+    position: relative !important;
+}
+
+.tw-flex-grow-1 {
+    flex-grow: 1 !important;
+}
+
+.tw-justify-content-center {
+    justify-content: center !important;
+}
+
+.tw-flex-column {
+    flex-direction: column !important;
+}
+
+.tw-flex {
+    display: flex !important;
+}
+
+.tw-flex {
+    display: flex !important;
+}
+
+tw-core-button--secondary {
+    background-clip: padding-box;
+    background-color: rgba(0,0,0,.1);
+    border-color: rgba(0,0,0,.1);
+    color: #322f37;
+}
+
+.tw-core-button--border, .tw-root--theme-dark .tw-core-button--border, .tw-root--theme-light .tw-core-button--border {
+    border: 1px solid transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+
+.tw-core-button--padded {
+    padding: 0 1rem;
+}
+
+.tw-core-button, .tw-core-button:hover {
+    text-decoration: none;
+}
+
+.tw-core-button {
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    font-size: 1.2rem;
+    height: 3rem;
+    outline: none;
+    user-select: none;
+    white-space: nowrap;
+}
+
+.tw-mg-t-1 {
+    margin-top: 1rem !important;
+}
+
+.tw-c-text-alt {
+    color: #322f37 !important;
+}
+
+h6, p {
+    font-size: 1.2rem;
+}
+
+body, h4, h5, h6, html, p {
+    line-height: 1.5;
+}
+
+.tw-c-background-base {
+    background-color: #fff !important;
+}
+
+.tw-border-bottom-left-radius-medium {
+    border-bottom-left-radius: 4px !important;
+}
+
+.tw-border-bottom-right-radius-medium {
+    border-bottom-right-radius: 4px !important;
+}
+
+.tw-border-top-right-radius-medium {
+    border-top-right-radius: 4px !important;
+}
+
+.tw-border-top-left-radius-medium {
+    border-top-left-radius: 4px !important;
+}
+
+.tw-border-l {
+    border-left: 1px solid #dad8de !important;
+}
+
+.tw-border-b {
+    border-bottom: 1px solid #dad8de !important;
+}
+
+.tw-border-r {
+    border-right: 1px solid #dad8de !important;
+}
+
+.tw-border-t {
+    border-top: 1px solid #dad8de !important;
+}
+
+.tw-mg-b-4 {
+    margin-bottom: 4rem !important;
+}
+
+:root {
+    --color-background-accent: #6441a4;
+    --color-background-accent-alt: #7d5bbe;
+    --color-background-accent-alt-2: #392e5c;
+    --color-background-alt: #faf9fa;
+    --color-background-alt-2: #efeef1;
+    --color-background-base: #fff;
+    --color-background-body: #faf9fa;
+    --color-background-button: #6441a4;
+    --color-background-button-active: #6441a4;
+    --color-background-button-alert: #e21212;
+    --color-background-button-alert-active: #e21212;
+    --color-background-button-alert-focus: #bd0f0f;
+    --color-background-button-alert-hover: #bd0f0f;
+    --color-background-button-disabled: rgba(0,0,0,0.05);
+    --color-background-button-focus: #7d5bbe;
+    --color-background-button-hover: #7d5bbe;
+    --color-background-button-overlay: transparent;
+    --color-background-button-overlay-active: hsla(0,0%,100%,0.1);
+    --color-background-button-overlay-focus: hsla(0,0%,100%,0.05);
+    --color-background-button-overlay-hover: hsla(0,0%,100%,0.05);
+    --color-background-button-purchase: rgba(0,0,0,0.25);
+    --color-background-button-secondary: rgba(0,0,0,0.1);
+    --color-background-button-secondary-active: rgba(0,0,0,0.2);
+    --color-background-button-secondary-focus: rgba(0,0,0,0.15);
+    --color-background-button-secondary-hover: rgba(0,0,0,0.15);
+    --color-background-button-status: #14b866;
+    --color-background-button-status-active: #e21212;
+    --color-background-button-status-focus: #bd0f0f;
+    --color-background-button-status-hover: #bd0f0f;
+    --color-background-button-success: #14b866;
+    --color-background-button-success-active: #14b866;
+    --color-background-button-success-focus: #12a159;
+    --color-background-button-success-hover: #12a159;
+    --color-background-button-text: transparent;
+    --color-background-button-text-active: transparent;
+    --color-background-button-text-focus: rgba(100,65,164,0.05);
+    --color-background-button-text-hover: rgba(100,65,164,0.05);
+    --color-background-chat: #faf9fa;
+    --color-background-chat-alt: #efeef1;
+    --color-background-chat-header: #faf9fa;
+    --color-background-chat-line-mentioned: #0f0e11;
+    --color-background-chat-line-mentioning: #dad8de;
+    --color-background-graph: #f9f8fc;
+    --color-background-graph-fill: #9a7fcc;
+    --color-background-input: #fff;
+    --color-background-input-checked: #7d5bbe;
+    --color-background-input-overlay: rgba(0,0,0,0.2);
+    --color-background-interactable: transparent;
+    --color-background-interactable-active: #6441a4;
+    --color-background-interactable-hover: #7d5bbe;
+    --color-background-interactable-selected: #d7cceb;
+    --color-background-live: #e21212;
+    --color-background-modal: #fff;
+    --color-background-modal-overlay: rgba(0,0,0,0.6);
+    --color-background-overlay: rgba(0,0,0,0.6);
+    --color-background-overlay-placeholder: hsla(0,0%,100%,0.15);
+    --color-background-pill: #6e6779;
+    --color-background-pill-notification: #e21212;
+    --color-background-placeholder: rgba(0,0,0,0.05);
+    --color-background-prime: #0e9bd8;
+    --color-background-progress: #dad8de;
+    --color-background-progress-countdown: none;
+    --color-background-progress-countdown-status: #7d5bbe;
+    --color-background-progress-overlay-mask: hsla(0,0%,100%,0.15);
+    --color-background-progress-overlay-status: #fff;
+    --color-background-progress-status: #7d5bbe;
+    --color-background-progress-status-caution: #ffb300;
+    --color-background-progress-status-error: #e21212;
+    --color-background-progress-status-success: #14b866;
+    --color-background-scrollbar: #000;
+    --color-background-social-column: #faf9fa;
+    --color-background-subscriber-stream-tag-active: #e2dbf0;
+    --color-background-subscriber-stream-tag-default: #e2dbf0;
+    --color-background-subscriber-stream-tag-hover: #eee9f6;
+    --color-background-toggle: #b8b5c0;
+    --color-background-toggle-checked: #14b866;
+    --color-background-toggle-focus: #b19dd8;
+    --color-background-toggle-handle: #fff;
+    --color-background-toggle-hover: #a49fad;
+    --color-background-tooltip: #0e0c13;
+    --color-background-top-nav: #6441a4;
+    --color-border-alert: #e21212;
+    --color-border-base: #dad8de;
+    --color-border-brand: #6441a4;
+    --color-border-button: #6441a4;
+    --color-border-button-active: #7d5bbe;
+    --color-border-button-alert: #e21212;
+    --color-border-button-alert-active: #e21212;
+    --color-border-button-alert-focus: #bd0f0f;
+    --color-border-button-alert-hover: #bd0f0f;
+    --color-border-button-disabled: transparent;
+    --color-border-button-focus: #9a7fcc;
+    --color-border-button-hover: #7d5bbe;
+    --color-border-button-overlay: transparent;
+    --color-border-button-overlay-active: hsla(0,0%,100%,0.6);
+    --color-border-button-overlay-bordered: #fff;
+    --color-border-button-overlay-focus: hsla(0,0%,100%,0.3);
+    --color-border-button-overlay-hover: transparent;
+    --color-border-button-secondary: rgba(0,0,0,0.1);
+    --color-border-button-secondary-active: rgba(0,0,0,0.2);
+    --color-border-button-secondary-focus: rgba(0,0,0,0.15);
+    --color-border-button-secondary-hover: rgba(0,0,0,0.15);
+    --color-border-button-status: #14b866;
+    --color-border-button-status-active: #e21212;
+    --color-border-button-status-focus: #bd0f0f;
+    --color-border-button-status-hover: #bd0f0f;
+    --color-border-button-success: #14b866;
+    --color-border-button-success-active: #14b866;
+    --color-border-button-success-focus: #14b866;
+    --color-border-button-success-hover: #14b866;
+    --color-border-button-text: #b19dd8;
+    --color-border-button-text-active: rgba(100,65,164,0.6);
+    --color-border-button-text-focus: rgba(100,65,164,0.5);
+    --color-border-button-text-hover: rgba(100,65,164,0.5);
+    --color-border-error: #e21212;
+    --color-border-input: #dad8de;
+    --color-border-input-checked: #7d5bbe;
+    --color-border-input-error: #e21212;
+    --color-border-input-focus: #7d5bbe;
+    --color-border-input-overlay: hsla(0,0%,100%,0.15);
+    --color-border-input-overlay-focus: hsla(0,0%,100%,0.6);
+    --color-border-interactable-selected: #6441a4;
+    --color-border-overlay: hsla(0,0%,100%,0.05);
+    --color-border-region: #e5e3e8;
+    --color-border-spinner: rgba(0,0,0,0.15);
+    --color-border-spinner-fill: #19171c;
+    --color-border-subscriber-stream-tag: #b19dd8;
+    --color-border-tab: #dad8de;
+    --color-border-tab-active: #6441a4;
+    --color-border-tab-focus: #6441a4;
+    --color-border-tab-hover: #6441a4;
+    --color-border-toggle: transparent;
+    --color-border-toggle-focus: #7d5bbe;
+    --color-border-toggle-hover: #7d5bbe;
+    --color-border-whisper-incoming: #b19dd8;
+    --color-border-whisper-outgoing: #a49fad;
+    --color-fill-alert: #e21212;
+    --color-fill-alt: #322f37;
+    --color-fill-alt-2: #6e6779;
+    --color-fill-base: #19171c;
+    --color-fill-brand: #6441a4;
+    --color-fill-button-icon-secondary: #6e6779;
+    --color-fill-button-icon-secondary-active: #a49fad;
+    --color-fill-button-icon-secondary-focus: #a49fad;
+    --color-fill-button-icon-secondary-hover: #a49fad;
+    --color-fill-current: currentColor;
+    --color-fill-drops: #14b866;
+    --color-fill-hosting: #ffea00;
+    --color-fill-info: #007ab8;
+    --color-fill-live: #e21212;
+    --color-fill-offline: #a49fad;
+    --color-fill-prime: #0e9bd8;
+    --color-fill-success: #0e7c57;
+    --color-fill-warn: #ff5b24;
+    --color-icon-input-checked: #fff;
+    --color-social-facebook: #3b5998;
+    --color-social-instagram: #405de6;
+    --color-social-paypal: #003087;
+    --color-social-reddit: #ff4500;
+    --color-social-snapchat: #fffc00;
+    --color-social-twitter: #1da1f2;
+    --color-social-vk: #45668e;
+    --color-social-youtube: #cd201f;
+    --color-text-alert: #e21212;
+    --color-text-alt: #322f37;
+    --color-text-alt-2: #6e6779;
+    --color-text-base: #19171c;
+    --color-text-button: #fff;
+    --color-text-button-active: #fff;
+    --color-text-button-alert: #fff;
+    --color-text-button-alert-active: #fff;
+    --color-text-button-alert-focus: #fff;
+    --color-text-button-alert-hover: #fff;
+    --color-text-button-disabled: rgba(0,0,0,0.2);
+    --color-text-button-focus: #fff;
+    --color-text-button-hover: #fff;
+    --color-text-button-overlay: #fff;
+    --color-text-button-overlay-active: #fff;
+    --color-text-button-overlay-focus: #fff;
+    --color-text-button-overlay-hover: #fff;
+    --color-text-button-secondary: #322f37;
+    --color-text-button-secondary-active: #322f37;
+    --color-text-button-secondary-focus: #322f37;
+    --color-text-button-secondary-hover: #322f37;
+    --color-text-button-status: #fff;
+    --color-text-button-status-active: #fff;
+    --color-text-button-status-focus: #fff;
+    --color-text-button-status-hover: #fff;
+    --color-text-button-success: #fff;
+    --color-text-button-success-active: #fff;
+    --color-text-button-success-focus: #fff;
+    --color-text-button-success-hover: #fff;
+    --color-text-button-text: #6441a4;
+    --color-text-button-text-active: #2c2541;
+    --color-text-button-text-focus: #2c2541;
+    --color-text-button-text-hover: #2c2541;
+    --color-text-chat-line-mentioned: #fff;
+    --color-text-chat-line-mentioning: #19171c;
+    --color-text-error: #e21212;
+    --color-text-hint: #6e6779;
+    --color-text-inherit: inherit;
+    --color-text-input: #433f4a;
+    --color-text-input-checked-icon: #fff;
+    --color-text-input-placeholder: #a49fad;
+    --color-text-interactable: currentColor;
+    --color-text-interactable-active: #fff;
+    --color-text-interactable-hover: #fff;
+    --color-text-interactable-selected: currentColor;
+    --color-text-label: #19171c;
+    --color-text-label-optional: #6e6779;
+    --color-text-link: #6441a4;
+    --color-text-link-active: #6441a4;
+    --color-text-link-focus: #6441a4;
+    --color-text-link-hover: #6441a4;
+    --color-text-link-visited: #6441a4;
+    --color-text-live: #e21212;
+    --color-text-overlay: #faf9fa;
+    --color-text-overlay-alt: #dad8de;
+    --color-text-overlay-link: #b19dd8;
+    --color-text-overlay-link-active: #b19dd8;
+    --color-text-overlay-link-focus: #b19dd8;
+    --color-text-overlay-link-hover: #b19dd8;
+    --color-text-overlay-link-visited: #b19dd8;
+    --color-text-pill: #19171c;
+    --color-text-prime: #0e9bd8;
+    --color-text-tab: #6441a4;
+    --color-text-tab-active: #0f0e11;
+    --color-text-toggle-checked-icon: #fff;
+    --color-text-tooltip: #fff;
+    --interactable-direction: -1;
+    --shadow-balloon: 0 1px 1px rgba(0,0,0,0.25);
+    --shadow-button-active: 0 0 6px 0 #7d5bbe;
+    --shadow-button-disabled: none;
+    --shadow-button-focus: 0 0 6px 0 #7d5bbe;
+    --shadow-button-overlay-active: 0 0 6px 0 hsla(0,0%,100%,0.3);
+    --shadow-button-overlay-focus: 0 0 6px 0 hsla(0,0%,100%,0.3);
+    --shadow-elevation-ambient: 0.04;
+    --shadow-elevation-penumbra: 0.02;
+    --shadow-elevation-umbra: 0.1;
+    --shadow-input: inset 0 0 0 1px #dad8de;
+    --shadow-input-error: 0 0 0 1px #e21212;
+    --shadow-input-error-focus: 0 0 6px -2px #e21212;
+    --shadow-input-focus: 0 0 6px -2px #7d5bbe;
+    --shadow-interactable-focus: 0 0 6px 1px #7d5bbe;
+    --shadow-scrollbar: 0 0 1px 1px hsla(0,0%,100%,0.25);
+    --shadow-tab-focus: 0 4px 6px -4px #7d5bbe;
+}
+
+.tw-root--theme-dark, :root {
+    --border-radius-large: 6px;
+    --border-radius-medium: 4px;
+    --border-radius-none: 0;
+    --border-radius-rounded: 50%;
+    --border-radius-small: 2px;
+    --border-width-default: 1px;
+    --border-width-marked: 3px;
+    --border-width-spinner: 2px;
+}
+
+.exp-kevlar-settings .account-page .account-container {
+    min-height: 100vh;
+}
+
+.account-container {
+    background-color: hsl(0,0%,98%);
+}
+
+.account-container {
+    border: 0;
+    padding-top: 0;
+    min-height: 400px;
+    background: #fff;
+    background-color: rgb(255, 255, 255);
+}
+
+.ytg-fl {
+    overflow: hidden;
+}
+
+.account-content {
+    margin: 10px 15px 40px;
+}
+
+.account-content {
+    margin: 10px 25px 30px;
+    padding-bottom: 10px;
+    line-height: 1.2;
+    color: #555;
+}
+
+    .account-content .account-section {
+        margin-bottom: 30px;
+    }
+
+.account-section {
+    margin-top: 20px;
+}
+
+h2.account-section-header {
+    color: #555;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+h1, h2 {
+    font-weight: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    margin-bottom: 0px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+}
+
+.account-info-item {
+    overflow: hidden;
+}
+
+    .account-info-item .account-info-label {
+        float: left;
+        width: 200px;
+    }
+
+    .account-info-item .account-info {
+        margin-left: 200px;
+    }
+
+.account-info.account-user-info {
+    margin-bottom: 20px;
+}
+.account-info .account-photo {
+    margin-right: 10px;
+    padding-bottom: 5px;
+    text-align: center;
+    display: inline-block;
+}
+.yt-thumb-clip img, .yt-thumb-clip .vertical-align {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.yt-thumb .vertical-align {
+    height: 100%;
+}
+.account-info .account-details {
+    vertical-align: top;
+    line-height: 13px;
+    display: inline-block;
+    max-width: 80%;
+    overflow: hidden;
+    white-space: nowrap;
+    word-wrap: normal;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+.account-info .account-display-name {
+    margin-bottom: 4px;
+}
+
+.account-info .account-detail {
+    display: block;
+    margin: 3px 0;
+    margin-bottom: 3px;
+}
+.account-info .account-detail {
+    display: block;
+    margin: 3px 0;
+}

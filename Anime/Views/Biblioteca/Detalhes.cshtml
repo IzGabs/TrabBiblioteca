@@ -1,0 +1,29 @@
+﻿@using Anime.Models;
+@model Animes
+
+@{
+    ViewBag.Title = "Detalhes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<a href="~/Models/Animes.cs">~/Models/Animes.cs</a>
+
+<h2>Detalhes</h2>
+
+<h3><b>@Model.NomeAnime</b></h3>
+<div class="row" style="margin-left:20%">
+    <div class="col-sm-6" style="text-align:left">
+        <img src="~/Imagem/@Model.Imagem" alt="@Model.Descricao"
+             style="width: 500px;height:350px;border:solid" />
+    </div>
+    <div class="col-sm-6" style="text-align:left">
+        <b>Nome: </b> @Model.NomeAnime<br />
+        <b>Descrição: </b> @Model.Descricao<br />
+        <b>Estudio: </b> @Model.Estudio<br />
+        <b>Duracao: </b> @Model.Duracao<br />
+        <b>Descricao: </b> @Model.Descricao<br />
+        @Html.ActionLink("Adicionar", "AdicionarAoCarrinho", "Home",
+                new { id = Model.IDAnime }, new { @class = "btn btn-success" })
+    </div>
+
+</div>
+

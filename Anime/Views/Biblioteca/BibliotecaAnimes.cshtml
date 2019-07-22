@@ -1,0 +1,93 @@
+﻿@using Anime.Models;
+@model List<Animes>
+@{
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "BibliotecaAnimes";
+    List<Categoria> categorias = ViewBag.Categorias;
+    <link href="~/Content2/css/kk.css" rel="stylesheet" />
+
+
+}
+
+<h2>
+    @TempData["MsgErro"]
+</h2>
+@foreach (Categoria item in categorias)
+{
+    <div class="title">
+        <div>
+            @Html.ActionLink(item.DescCategoria, "Animes" + item.DescCategoria, "Biblioteca",
+                     new { id = item.IDCategoria }, new { @class = "btn btn-warning" })
+        </div>
+    </div>
+
+}
+
+@foreach (var item in Model)
+{
+    <div class="seasonal">
+        <div>
+            <div class="title">
+                <p class="title-text btn btn-warning">
+                    @item.NomeAnime
+                </p>
+            </div>
+
+        </div>
+        <div class="prodsrc">
+            <div class="producer">
+                <span>Estúdio : @item.Estudio</span>
+            </div>
+            <div class="prodsrc">
+                <div class="producer">
+                    <span>Estúdio : @item.Estudio</span>
+                </div>
+                <div class="eps">
+                    <span>Episodios : @item.Duracao</span>
+                </div>
+
+                <span class="source">@item.Categoria</span>
+            </div>
+        </div>
+        <div class="genres" align="center">
+            <div class="genres-inner">
+                <span class="genre">@item.Categoria</span>
+            </div>
+
+        </div>
+
+
+
+
+        <div>
+            <img src="~/Imagem/@item.Imagem" style="width:167px;height:242px; float:left " />
+
+        </div>
+        <div class="synopsis">
+            <span class="preline">
+                @item.Descricao
+            </span>
+        </div>
+        <br />
+        <div class="information">
+            <div class="info ">
+                @Html.ActionLink("Estou Assistindo!", "AssistindoAnime", "Biblioteca",
+                         new { id = item.IDAnime }, new { @class = "btn btn-warning" })
+            </div>
+            <div class="scor">
+                @Html.ActionLink("Assisti Inteiro! (izi pizi)", "AdicionarAssistidos", "Biblioteca",
+                        new { id = item.IDAnime }, new { @class = "btn btn-danger" })
+
+            </div>
+
+        </div>
+
+    </div>
+
+}

@@ -1,0 +1,235 @@
+﻿.seasonal {
+    border: #f0f0f0 1px solid;
+    display: block;
+    float: left;
+    font-family: Avenir,lucida grande,tahoma,verdana,arial,sans-serif;
+    height: 400px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 4px;
+    overflow: hidden;
+    position: relative;
+    width: 334px;
+}
+.synopsis {
+    display: inline-block;
+    font-size: 11px;
+    height: 230px;
+    line-height: 1.4em;
+    overflow: auto;
+    padding: 6px 4px 4px 8px;
+    width: 155px;
+}
+.title {
+    display: table-cell;
+    height: 40px;
+    margin: 0;
+    overflow: hidden;
+    text-align: center;
+    vertical-align: middle;
+    width: 334px;
+    background-color: #efefef;
+    border-bottom: #f0f0f0 1px solid;
+}
+.title-text {
+    font-family: Avenir,lucida grande,tahoma,verdana,arial,sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.1em;
+    max-height: 34px;
+    padding: 0 4px;
+
+}
+.genres-inner {
+    display: table-cell;
+    width: 334px;
+    background-color: #efefef;
+}
+.preline {
+    white-space: normal;
+}
+.genre {
+    background-color: #fff;
+    border: #e1e7f7 1px solid;
+    border-radius: 5px;
+    color: #787878;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Avenir,lucida grande,tahoma,verdana,arial,sans-serif;
+    font-size: 9px;
+    line-height: 1.0em;
+    margin-bottom: 6px;
+    margin-right: 4px;
+    padding: 1px 4px;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+}
+.seasonal-anime-list .seasonal-anime .genres {
+    background-color: #efefef;
+    border-bottom: #f0f0f0 1px solid;
+    display: block;
+    height: 12px;
+    list-style: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 6px 10px;
+    position: relative;
+    text-align: center;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+    -webkit-transition-property: all;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
+    vertical-align: middle;
+    width: 314px;
+}
+.information {
+    border-top: 1px solid #ededed;
+    bottom: 0;
+    display: table;
+    height: 20px;
+    left: 0;
+    position: absolute;
+    width: 334px;
+    z-index: 2;
+}
+.info {
+    background-color: #f9f9f9;
+    color: #585858;
+    display: table-cell;
+    font-size: 10px;
+    font-weight: 700;
+    height: 20px;
+    line-height: 1.0em;
+    padding-top: 4px;
+    text-align: center;
+    width: 167px;
+}
+.scor {
+    background-color: #f9f9f9;
+    color: #585858;
+    display: table-cell;
+    font-size: 11px;
+    font-weight: 700;
+    height: 21px;
+    line-height: 1.0em;
+    overflow: hidden;
+    padding: 0;
+    padding-top: 4px;
+    width: 166px;
+}
+.prodsrc {
+    background-color: #f0f0f0;
+    display: block;
+    display: -webkit-box;
+    display: flex;
+    display: -ms-flexbox;
+    -ms-flex-direction: row;
+    height: 25px;
+    overflow: hidden;
+    padding: 3px 0;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+.producer {
+    -webkit-box-flex: 1;
+    box-flex: 1;
+    color: #7f7f7f;
+    display: inline-block;
+    -ms-flex: 1;
+    flex: 1;
+    font-family: Avenir,lucida grande,tahoma,verdana,arial,sans-serif;
+    font-size: 11px;
+    margin: 0 8px;
+    overflow: hidden;
+    padding: 0;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 20px;
+    overflow: hidden;
+    width: 120px;
+   
+}
+.eps {
+    border-left: 1px solid #d8d8d8;
+    color: #7f7f7f;
+    display: inline-block;
+    font-size: 11px;
+    line-height: 1.0em;
+    padding: 0;
+    padding: 0 8px;
+}
+.source {
+    border-left: 1px solid #d8d8d8;
+    -webkit-box-flex: 1;
+    box-flex: 1;
+    color: #7f7f7f;
+    display: inline-block;
+    -ms-flex: 1;
+    flex: 1;
+    font-family: Avenir,lucida grande,tahoma,verdana,arial,sans-serif;
+    font-size: 11px;
+    padding: 0;
+    padding-left: 8px;
+    text-align: left;
+}
+.tw-mg-b-1 {
+    margin-bottom: 1rem !important;
+}
+.tw-pd-x-3 {
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+}
+.tw-pd-t-3 {
+    padding-top: 3rem !important;
+}
+.tw-z-default {
+    z-index: 1 !important;
+}
+
+.tw-relative {
+    position: relative !important;
+}
+
+.tw-flex-grow-1 {
+    flex-grow: 1 !important;
+}
+
+.tw-flex-column {
+    flex-direction: column !important;
+}
+
+.tw-flex {
+    display: flex !important;
+}
+
+.tw-full-height {
+    height: 100% !important;
+}
+
+.tw-full-width {
+    width: 100% !important;
+}
+
+.tw-overflow-hidden {
+    overflow: hidden !important;
+}
+
+.tw-strong {
+    font-weight: 600 !important;
+}
+
+.tw-c-text-alt {
+    color: #322f37 !important;
+}
+
+.tw-font-size-4 {
+    font-size: 1.6rem !important;
+}

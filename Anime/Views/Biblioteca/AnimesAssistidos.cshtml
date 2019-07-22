@@ -1,0 +1,70 @@
+﻿@using Anime.Models
+@model List<Anime.Models.Assistidos>
+
+@{
+    ViewBag.Title = "AnimesAssistidos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+
+    <link href="~/Content2/css/teste.css" rel="stylesheet" />
+
+}
+
+
+<table align="center">
+    <tr>
+        <td>
+            <h2><b>Seus Animes Assistidos</b></h2>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h2> Total: @ViewBag.Total</h2>
+        </td>
+    </tr>
+</table>
+
+
+
+
+<div style="margin-left:10px">
+    <table cellspacing="0" cellpadding="0" class="table table-hover">
+
+        <thead>
+            <tr>
+                <th scope="col">Tipo</th>
+                <th scope="col">Imagem</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Estudio</th>
+                <th scope="col">Temporadas</th>
+                <th scope="col">Descrição</th>
+                <th>
+                </th>
+            </tr>
+        </thead>
+
+        @foreach (var item in Model)
+        {
+
+
+            <tr style="text-align:center; ">
+
+                <th style="vertical-align:middle">@item.Anime.Categoria </th>
+                <th style="vertical-align:middle">
+                    <img src="~/Imagem/@item.Anime.Imagem" alt="Imagem do anime @item.Anime.NomeAnime" style="width: 80px;" />
+                </th>
+                <th style="vertical-align:middle">@item.Anime.NomeAnime </th>
+                <th style="vertical-align:middle" scope="col">@item.Anime.Estudio </th>
+                <th style="vertical-align:middle" scope="col">@item.Anime.Temporadas.Count </th>
+                <th style="vertical-align:middle" scope="col">@item.Anime.Descricao </th>
+                <th>
+                    @Html.ActionLink("Remover", "ExcluirAssistidos", "Biblioteca", new { id = item.IDANimeAssistido }, new { @class = "btn btn-danger" })
+                </th>
+            </tr>
+
+
+        }
+
+
+    </table>
+</div>

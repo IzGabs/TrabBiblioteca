@@ -1,0 +1,67 @@
+﻿
+@{
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    ViewBag.Title = "Configuracao";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    <link href="~/Content2/css/kk.css" rel="stylesheet" />
+    <link href="~/Content2/css/teste.css" rel="stylesheet" />
+    TempData.Keep();
+}
+<div class="ytg-fl account-container">
+    <div class="tw-z-default tw-flex tw-flex-column tw-flex-grow-1  tw-overflow-hidden tw-relative">
+        <div class="tw-pd-x-3 tw-pd-t-3">
+            <div class="tw-mg-b-1">
+                <h2 style="color:black">Configuração</h2>
+            </div>
+            <div class="tw-mg-b-2">
+                <div class="tw-c-text-alt tw-font-size-4 tw-strong">Imagem de Perfil</div>
+            </div>
+
+        </div>
+
+        <div class="root-scrollable__wrapper tw-full-width tw-relative">
+            <div class="tw-flex tw-flex-column tw-flex-nowrap tw-full-height tw-full-width tw-pd-x-3">
+                <div class="settings-root__content tw-pd-y-2">
+
+                    <div class="tw-border-b tw-border-bottom-left-radius-medium tw-border-bottom-right-radius-medium tw-border-l tw-border-r tw-border-t tw-border-top-left-radius-medium tw-border-top-right-radius-medium tw-c-background-base tw-mg-b-4">
+                        <div class="settings-row tw-full-width tw-pd-2">
+                            <div class="profile-image-setting">
+                                <div class="tw-flex tw-flex-row">
+                                    <div class="account-content">
+                                        <div class="account-section">
+                                            <h2 class="account-section-header"> Seu Perfil do Otaku Library</h2>
+                                            <div class="account-info-item">
+                                                <span class="account-info-label"> Seu Perfil</span>
+                                                <div class="account-info account-user-info">
+                                                    <div class="account-photo" style="text-align:center">
+                                                        <img class="img-profile" style="width:auto; height:auto; text-align:center" src="/Imagem/%c3%adndice2k.jpg" />
+                                                    <span class="vertical-align"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="account-details">
+                                                    <span class="account-detail account-display-name" style="color:blue">
+                                                        @TempData["Nickname"]
+                                                    </span>
+                                                    <span class="account-detail" style="color:blue">
+                                                        <span class="account-email">
+                                                            @TempData["Email"]
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                                <a> @Html.ActionLink("Alterar Imagem", "ConfigImagem", "Home")</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

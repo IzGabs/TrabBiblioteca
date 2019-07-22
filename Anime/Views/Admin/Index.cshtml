@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutADM.cshtml";
+    ViewBag.Msg = TempData["Msgs"];
+}
+
+<h1>Olá, Desenvolvedor</h1>
+
+@Html.ActionLink("AdicionarAnime", "AdicionarAnime");
+
+
+<div class="align-items-center">
+    <h2> @ViewBag.Msg</h2>
+    
+
+</div>
+ <h2> * Para adicionar ou alterar, você precisa pesquisar o anime primeiro</h2>
+@using (Html.BeginForm("PesquisarAnime", "Admin", FormMethod.Post, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
+{
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.TextBox("NomeAnime", "", new { @class = "form-control bg-light border-0 small", @placeholder = "Procurar por..." })
+    <div class="form-group">
+        <button class="btn btn-primary" type="submit">
+            <i class="fas fa-search fa-sm"></i>
+        </button>
+    </div>
+}
+
+
+
+

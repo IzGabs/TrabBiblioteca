@@ -1,0 +1,66 @@
+﻿@model Anime.Models.Animes
+@{
+    ViewBag.Title = "PesquisaAnime";
+    Layout = "~/Views/Shared/_LayoutADM.cshtml";
+}
+
+<h2>Resultado da Pesquisa: </h2>
+
+<table class="table table-hover table-striped" style="margin: 4% ">
+
+    <tr>
+        <th><h4><strong>Nome </strong>  </h4></th>
+        <td><h4> @Model.NomeAnime </h4></td>
+    </tr>
+    <tr>
+        <th><h4> <strong>Duracao</strong> </h4></th>
+        <td><h4> @Model.Duracao </h4></td>
+    </tr>
+    <tr>
+        <th><h4> <strong>Estudio </strong> </h4></th>
+        <td><h4> @Model.Estudio</h4></td>
+    </tr>
+    <tr>
+        <th> <h4> <strong>Categoria </strong> </h4></th>
+        <td><h4> @Model.Categoria.DescCategoria</h4></td>
+    </tr>
+    <tr>
+        <th><h4> <strong>Temporadas </strong> </h4></th>
+        <td><h4> @Model.Temporadas.Count</h4> </td>
+    </tr>
+    <tr>
+        <th><h4><strong> Descrição </strong>  </h4> </th>
+        <td><h4> @Model.Descricao</h4></td>
+    </tr>
+    <tr>
+
+        <th>
+            <h4> <strong>Imagem Anime </strong> </h4>
+            <br />
+            <div onclick="myDelete()" style="margin-left: 6%; margin-top: 2%;">
+                @Html.ActionLink("Remover Anime", "RemoverAnime", "Admin",
+                          new { id = Model.IDAnime },
+                          new { @class = "btn btn-danger" })
+            </div>
+            <br />
+            <div style="margin-left: 6%;  margin-top: 2%;">
+                @Html.ActionLink("Alterar Anime", "AlterarAnime", "Admin",
+                          new { id = Model.IDAnime },
+                          new { @class = "btn btn-danger" })
+            </div>
+            <br />
+            <div style="margin-left: 6%;  margin-top: 2%;">
+                @Html.ActionLink("Adicionar Temporada", "AdicionarTemp", "Admin",
+                          new { id = Model.IDAnime },
+                          new { @class = "btn btn-danger" })
+            </div>
+        </th>
+        <th>
+            <img src="~/Imagem/@Model.Imagem" alt="@Model.Imagem" style="width: 450px;" />
+        </th>
+    </tr>
+</table>
+<script>
+    function myDelete() { alert("Anime Deletado! "); }
+
+</script>

@@ -1,0 +1,69 @@
+﻿@model Anime.Models.Animes
+
+@{
+    ViewBag.Title = "AssistindoAnime";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string helps = TempData["SaveChan"] as string;
+    if (TempData["SaveChan"] == null)
+    {
+        helps = "Selecione";
+    }
+
+}
+
+<h2>AssistindoAnime</h2>
+
+@using (Html.BeginForm("AssistindoAnime", "Biblioteca", FormMethod.Post, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
+{
+
+    <div class="form-horizontal">
+        <h4>Animes</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(model => model.NomeAnime, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.NomeAnime, new { htmlAttributes = new { @class = "form-control", @readonly = "" } })
+
+        </div>
+        @Html.HiddenFor(model => model.IDAnime)
+        @Html.HiddenFor(model => model.Categoria)
+    </div>
+
+        <div class="form-group" id="fupImagem">
+
+            <div class="col-md-10">
+                <img src="~/Imagem/@Model.Imagem" alt="Imagem do anime @Model.NomeAnime" name="fupImagem" style="width: 150px;" />
+
+            </div>
+        </div>
+    </div>
+
+    if (ViewBag.Episodios != null)
+    {
+        <div class="form-group" style="position:absolute; top: 55%; width:100px">
+            @Html.Label("Episodio", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-sm-10">
+                @Html.DropDownList("Episodios", null, new { @class = "form-control" })
+            </div>
+        </div>
+    }
+
+    <div class="form-group" style="position:absolute; top: 68%;">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Salvar" class="btn btn-warning" />
+        </div>
+    </div>
+}
+@using (Html.BeginForm("EpisodiosTemporada", "Biblioteca", FormMethod.Post, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
+{
+
+    <div class="form-group"  id="Temporada" >
+        @Html.Label("Ultima Temporada Assistida: ", new { @class = "control-label col-md-2" })
+        <div class="col-md-10"  style="width:400px">
+            @Html.DropDownList("Temporada", null, helps, new { @class = "form-control", @onchange = "this.form.submit()" })
+        </div>
+    </div>
+}
+
+

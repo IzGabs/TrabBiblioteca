@@ -1,0 +1,85 @@
+﻿@model List<Anime.Models.PropAnimes.AssistindoAnime>
+@{
+    ViewBag.Title = "AnimesAssistindo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    List<int> a = ViewBag.ListaTempo;
+}
+
+<h2>Animes Que você ainda está assistindo </h2>
+<table align="center">
+    <tr>
+        <td>
+            <h2><b>Seus Animes sendo Assistidos</b></h2>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+    </tr>
+</table>
+<div style="margin-left:10px">
+    <table cellspacing="0" cellpadding="0" class="table table-hover">
+
+        <thead>
+            <tr style="text-align:center;">
+                <th scope="col" style="vertical-align:middle">Categoria</th>
+                <th scope="col" style="vertical-align:middle">Imagem</th>
+                <th scope="col" style="vertical-align:middle">Nome</th>
+                <th scope="col" style="vertical-align:middle">Temporada</th>
+                <th scope="col" style="vertical-align:middle">Ultimo Episódio Assistido</th>
+                <th scope="col" style="vertical-align:middle">Episódios Totais da Temporada</th>
+                <th scope="col" style="vertical-align:middle">Minutos para conclusão da Temporada</th>
+                <th scope="col" style="vertical-align:middle">Temporadas Totais</th>
+                <th scope="col" style="text-align:left">Ações</th>
+
+
+                <th>
+                </th>
+            </tr>
+        </thead>
+
+        @foreach (Anime.Models.PropAnimes.AssistindoAnime item in Model)
+        {
+            if (item.Anime != null)
+            {
+    <tr style="text-align:center; ">
+
+        <th scope="col" style="vertical-align:middle">@item.Anime.Categoria.DescCategoria </th>
+        <th scope="col" style="vertical-align:middle">
+            <img src="~/Imagem/@item.Anime.Imagem" alt="Imagem do anime @item.Anime.NomeAnime" style="width: 80px;" />
+        </th>
+        <th scope="col" style="vertical-align:middle">@item.Anime.NomeAnime </th>
+        <th scope="col" style="vertical-align:middle">@item.TemporadaAtual.Estacao &sim; @item.TemporadaAtual.Ano </th>
+        <th scope="col" style="vertical-align:middle">@item.UltimoEP.NomeEpisodio &sim; @item.UltimoEP.NumEpisodio </th>
+        <th scope="col" style="vertical-align:middle">@item.TemporadaAtual.Episodios.Count()</th>
+        <th scope="col" style="vertical-align:middle">@item.TempoConclusão</th>
+        <th scope="col" style="vertical-align:middle">@item.Anime.Temporadas.Count()</th> <!-- Pode fazer conta aqui mesmo? -->
+
+
+        <th scope="col" style="text-align:left">
+            <div class="info ">
+                @Html.ActionLink("Remover!", "RemoverAssistindo", "Biblioteca",
+                 new { id = item.IDAnimeSendoAssistido }, new { @class = "btn btn-danger" })
+            </div>
+            <br />
+            <div class="info">
+                @Html.ActionLink("Atualizar Ultimo EP!", "AtualizarEpAnime", "Biblioteca",
+                 new { id = item.IDAnimeSendoAssistido }, new { @class = "btn btn-danger" })
+            </div>
+            <br />
+            <div class="scor">
+                @Html.ActionLink("Assisti Inteiro! (izi pizi)", "AdicionarAssistidos", "Biblioteca",
+                        new { id = item.Anime.IDAnime }, new { @class = "btn btn-danger" })
+            </div>
+            <br />
+        </th>
+    </tr>
+            }
+
+
+        }
+
+
+
+    </table>
+</div>
+

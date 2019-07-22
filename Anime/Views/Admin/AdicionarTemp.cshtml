@@ -1,0 +1,75 @@
+﻿@model Anime.Models.Animes
+
+@{
+    ViewBag.Title = "Adicionar Temporada";
+    Layout = "~/Views/Shared/_LayoutADM.cshtml";
+}
+
+<div style="margin-left: 40%">
+    <h4>Anime cadastrado </h4>
+</div>
+
+
+<div class="table table-hover table-striped">
+    <table class="table table-hover table-striped">
+        <tr>
+            <td>
+                <img src="~/Imagem/@Model.Imagem" alt="@Model.Imagem" style="width: 150px" />
+
+            </td>
+            <td> @Model.NomeAnime </td>
+            <td> @Model.Estudio </td>
+            <td> @Model.Duracao</td>
+            <td> @Model.Categoria.DescCategoria</td>
+            <td> @Model.Descricao</td>
+
+        </tr>
+
+    </table>
+</div>
+
+
+
+
+@using (Html.BeginForm("AdicionarTemp", "Admin", FormMethod.Post, new { @class = "form-horizontal" }))
+{
+<div class="form-horizontal">
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    
+    <!--  Temporada -->
+    <div id="Estacao" class="form-group">
+        @Html.Label("Temporadas", new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownList("Temporadas", null,
+                " -- SELECIONE -- ",
+                new { @class = "form-control" })
+        </div>
+    </div>
+
+    <!--  Ano -->
+    <div id="txtAno" class="form-group">
+        @Html.Label("Ano", new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBox("txtAno", null, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <!--  Episodios  -->
+    <div id="QtdeEps" class="form-group">
+        @Html.Label("Episodios", new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBox("QtdeEps", null, new { @class = "form-control", @type="number" })
+        </div>
+    </div>
+
+    <!-- Submit -->
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Adicionar Temporada" class="btn btn-dark mx-auto" />
+        </div>
+    </div>
+
+</div>
+}
+

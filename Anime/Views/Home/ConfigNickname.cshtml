@@ -1,0 +1,43 @@
+﻿@using Anime.Models;
+@model Usuario
+@{
+
+    ViewBag.Title = "Configurações";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    <link href="~/Content2/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+}
+<h1 style="text-align:center">Suas Configurações</h1>
+</br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 col-lg-8 mx-auto text-left">
+            @using (Html.BeginForm("AlterarNickname", "Home", FormMethod.Post, new { @class = "form-horizontal" }))
+            {
+                @Html.HiddenFor(model => model.UsuarioId)
+                @Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+                    <h4>Alterar dados de Nickname</h4>
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    @Html.HiddenFor(model => model.UsuarioId)
+
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Nickname, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Nickname, new { htmlAttributes = new { @class = "form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0", @placeholder = "Digite o seu novo Nickname..." } })
+                            @Html.ValidationMessageFor(model => model.Nickname, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Salvar" class="btn btn-warning" />
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

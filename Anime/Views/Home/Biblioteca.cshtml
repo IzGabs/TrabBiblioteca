@@ -1,0 +1,33 @@
+﻿@using Anime.Models
+
+@{
+    ViewBag.Title = "Biblioteca";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    List<Animes> itens = ViewBag.Animes;
+}
+
+<div class="row">
+    <div class="col-sm-6" id="resumoCompra">
+        <fieldset>
+            <legend>Animes da Biblioteca</legend>
+            <table class="table table-hover table-striped">
+                <tr>
+                    <th>Nome</th>
+                    <th>Descricao</th>
+                </tr>
+                @foreach (Animes item in itens)
+                {
+                    <tr>
+                        <td>@item.NomeAnime</td>
+                        <td>@item.Descricao</td>
+                    </tr>
+
+                    <div>
+                        <img src="~/Imagem/@item.Imagem" style="width:167px;height:242px; float:left " />
+
+                    </div>
+                }
+            </table>
+        </fieldset>
+    </div>
+</div>

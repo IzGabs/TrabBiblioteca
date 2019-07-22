@@ -1,0 +1,51 @@
+﻿@using Anime.Models;
+@model Usuario
+@{
+    ViewBag.Title = "Configuração";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+<link href="~/Content2/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+}
+<h1 style="text-align:center">Suas Configurações</h1>
+</br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 col-lg-8 mx-auto text-left">
+            @using (Html.BeginForm("AlterarEmail", "Home", FormMethod.Post, new { @class = "form-horizontal" }))
+            {
+                @Html.HiddenFor(model => model.UsuarioId)
+                @Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+                    <h4>Alterar dados do Usuario</h4>
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    @Html.HiddenFor(model => model.UsuarioId)
+
+
+
+                    <div class="col-xl-3 col-md-6 mb-4" style="margin:auto">
+                        <div class="card border-bottom-warning shadow h-100 py-2">
+                            <div class="card-body">
+                                @Html.Label("Alterar Imagem de Perfil", new { @class = "control-label col-sm-12" })
+                                <div class="col-sm-9">
+                                    <input type="file" id="fupImagem" name="fupImagem"
+                                           class="form-control-file" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Salvar" class="btn btn-warning" />
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+
+
+

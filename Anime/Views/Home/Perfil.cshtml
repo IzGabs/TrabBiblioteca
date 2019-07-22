@@ -1,0 +1,399 @@
+﻿@using Anime.Models
+@model List<Anime.Models.Assistidos>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Otaku Library";
+    <script src="~/Content2/js/multibar.js"></script>
+    <script src="~/Content2/js/multibar.min.js"></script>
+    <link href="~/Content2/css/multibar.css" rel="stylesheet" />
+    <link href="~/Content2/css/multibar.min.css" rel="stylesheet" />
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body id="page-top">
+
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+        <embed src="~/Musica/SAO.mp3" width="70" height="25" autostart="true" style="background-color:#ffb72c">
+        <!-- Page Heading -->
+        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Biblioteca de Animes - Meu Perfil</h1>
+        </div>
+        <!-- Content Row -->
+        <div class="row">
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-primary shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Seja Bem-Vindo ao Otaku Library</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">É quase um caminho sem volta</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-success shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Horas gastas em vida</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">@ViewBag.Total min - Um verdadeiro amante de animes</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-clock fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-info shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Novidades Todo Mes!</div>
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col-auto">
+                                        <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">Fique ligado que todo dia entra coisa nova! </div>
+                                    </div>
+                                    <div class="col">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Pending Requests Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-warning shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Animes em destaque</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">Lançamentos da Temporada de Inverno</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-comments fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Content Row -->
+        <div class="row">
+            <!-- Area Chart -->
+            <div class="col-xl-8 col-lg-7">
+                <div class="card shadow mb-4">
+                    <!-- Card Header - Dropdown -->
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <h6 class="m-0 font-weight-bold text-primary">Anime sensação da temporada - Shingeki no Kyoujin</h6>
+
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body">
+                        <div class="text-center">
+                            <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width:auto; height: auto" src="~/Imagem/wp1837555-attack-on-titan-wallpapers3.png" id="Ajuda1" alt="">
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Pie Chart -->
+            <div class="col-xl-4 col-lg-5">
+                <div class="card shadow mb-4">
+                    <!-- Card Header - Dropdown -->
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <h6 class="m-0 font-weight-bold text-primary">Progresso em Animes</h6>
+                        <div class="dropdown no-arrow">
+                            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                                <div class="dropdown-header">Dropdown Header:</div>
+                                <a class="dropdown-item" href="#">Alguma coisa</a>
+                                <a class="dropdown-item" href="#">Alguma coisa</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Ver mais</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body">
+                        <div class="chart-pie pt-4 pb-2">
+                            <canvas id="myPieChart"></canvas>
+                        </div>
+                        <div class="mt-4 text-center small">
+                            <span class="mr-2">
+                                <i class="fas fa-circle text-primary"></i> Tempo vitalício perdidos em animes
+                            </span>
+                            <span class="mr-2">
+                                <i class="fas fa-circle text-success"></i> Tempo gasto em animes neste mês
+                            </span>
+                            <span class="mr-2">
+                                <i class="fas fa-circle text-info"></i> Tempo gasto em animes hoje
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Content Row -->
+        <div class="row">
+            <!-- Content Column -->
+            <div class="col-lg-6 mb-4">
+                <!-- Project Card Example -->
+
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary">Progresso Em Animes</h6>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="small font-weight-bold">Progresso de Animes(registrados na biblioteca) <span class="float-right"></span></h4>
+                        <div id="boxMultibar">
+                            <script>
+                                var options = {
+                                    type: "cold"
+                                };
+                                var bar = $('#boxMultibar').multibar(options);
+                                bar.multibar('setValue');</script>
+                        </div>
+                        </br>
+
+                        @ViewBag.Contador;
+                        @foreach (var item in Model)
+                        {
+                            <h4 class="small font-weight-bold">@item.Anime.NomeAnime <span class="float-right">%</span></h4>
+                            <div class="progress mb-4">
+                                <div id="progresso" class="progress-bar progress-bar-striped" role="progressbar" style="width:100%; background-color:darkblue" aria-valuenow="40" aria-valuemin="0" aria-valuemax="10"></div>
+                                <button onclick="move()">Atualizar</button>
+                            </div>
+                        }
+
+                    </div>
+                </div>
+
+                <!-- Color System -->
+                <div class="row">
+                    <div class="col-lg-6 mb-4">
+                        <div class="text-white shadow" style="background: #ffc0cb">
+                            <div class="card-body">
+                                Ecchi
+                                <div class="text-white-50 small">
+                                    <a> @Html.ActionLink("Ver mais", "AnimesEcchi", "Biblioteca")</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-4">
+                        <div class="card bg-dark text-white shadow">
+                            <div class="card-body">
+                                Horror
+                                <div class="text-white-50 small">
+                                    <a> @Html.ActionLink("Ver mais", "AnimesHorror", "Biblioteca")</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-4">
+                        <div class="card bg-info text-white shadow">
+                            <div class="card-body">
+                                Shounen
+                                <div class="text-white-50 small">
+                                    <a> @Html.ActionLink("Ver mais", "AnimesShonen", "Biblioteca")</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-4">
+                        <div class="card bg-warning text-white shadow">
+                            <div class="card-body">
+                                Seinen
+                                <div class="text-white-50 small">
+                                    <a> @Html.ActionLink("Ver mais", "AnimesSeinen", "Biblioteca")</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-4">
+                        <div class="card bg-danger text-white shadow">
+                            <div class="card-body">
+                                Hentai
+                                <div class="text-white-50 small">
+                                    <a> @Html.ActionLink("Ver mais", "AnimesHentai", "Biblioteca")</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-4">
+                        <div class="card bg-secondary text-white shadow">
+                            <div class="card-body">
+                                Josei
+                                <div class="text-white-50 small">
+                                    <a> @Html.ActionLink("Ver mais", "AnimesJosei", "Biblioteca")</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-4">
+                        <div class="card text-white shadow" style="background-color:fuchsia">
+                            <div class="card-body">
+                                Shōjo
+                                <div class="text-white-50 small">
+                                    <a> @Html.ActionLink("Ver mais", "AnimesShoujo", "Biblioteca")</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-4">
+                        <div class="card text-white" style="background-color:maroon">
+                            <div class="card-body">
+                                Kodomo
+                                <div class="text-white-50 small">
+                                    <a> @Html.ActionLink("Ver mais", "AnimesKodomo", "Biblioteca")</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+                <!-- Illustrations -->
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary"> API Teenor GIF</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="text-center">
+                            <img id="preview_gif" src="" alt="" style="width:500px;">
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+                <!-- Approach -->
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary">Sobre</h6>
+                    </div>
+                    <div class="card-body">
+                        <p>Opa, professor amizade ai cade meu 10?</p>
+                        <p class="mb-0"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Content -->
+
+</body>
+</html>
+
+<script>
+
+    // url Async requesting function
+    function httpGetAsync(theUrl, callback) {
+        // create the request object
+        var xmlHttp = new XMLHttpRequest();
+
+        // set the state change callback to capture when the response comes in
+        xmlHttp.onreadystatechange = function () {
+            if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                callback(xmlHttp.responseText);
+            }
+        }
+
+        // open as a GET call, pass in the url and set async = True
+        xmlHttp.open("GET", theUrl, true);
+
+        // call send with no params as they were passed in on the url string
+        xmlHttp.send(null);
+
+        return;
+    }
+
+    // callback for the top 8 GIFs of search
+    function tenorCallback_search(responsetext) {
+        // parse the json response
+        var response_objects = JSON.parse(responsetext);
+
+        top_10_gifs = response_objects["results"];
+
+        // load the GIFs -- for our example we will load the first GIFs preview size (nanogif) and share size (tinygif)
+
+        document.getElementById("preview_gif").src = top_10_gifs[0]["media"][0]["nanogif"]["url"];
+
+        document.getElementById("share_gif").src = top_10_gifs[0]["media"][0]["tinygif"]["url"];
+
+        return;
+
+    }
+
+
+    // function to call the trending and category endpoints
+    function grab_data(anon_id) {
+        // set the apikey and limit
+        var apikey = "BPB9T1F75UXN";
+        var lmt = 8;
+
+        // test search term
+        var search_term = "United States of Smash";
+
+        // using default locale of en_US
+        var search_url = "https://api.tenor.com/v1/search?tag=" + search_term + "&key=" +
+            apikey + "&limit=" + lmt + "&anon_id=" + anon_id;
+
+        httpGetAsync(search_url, tenorCallback_search);
+
+        // data will be loaded by each call's callback
+        return;
+    }
+
+
+    // callback for anonymous id -- for first time users
+    function tenorCallback_anonid(responsetext) {
+        // parse the json response
+        var response_objects = JSON.parse(responsetext);
+
+        anon_id = response_objects["anon_id"];
+
+        user_anon_id = anon_id;
+
+        // pass on to grab_data
+        grab_data(anon_id);
+    }
+
+    // SUPPORT FUNCTIONS ABOVE
+    // MAIN BELOW
+
+    // if returning user, grab their stored  anonymous ID and jump directly to getting data
+    // anon_id = <from cookies>
+    // user_anon_id = anon_id;
+    // grab_data(anon_id);
+
+    // else first time user
+    var url = "https://api.tenor.com/v1/anonid?key=" + "LIVDSRZULELA";
+
+    // start the flow by getting a new anonymous id and having the callback pass it to grab_data
+    httpGetAsync(url, tenorCallback_anonid);
+
+</script>
