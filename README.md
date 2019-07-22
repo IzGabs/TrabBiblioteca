@@ -10,7 +10,7 @@ Para executar o projeto você precisa:
    Uninstall-package EntityFramework;
    Install-package EntityFramework;
    Enable-Migrations;
-   Add-Migtration First;
+   Add-Migration First;
    Update-Database;
 3. Executar o projeto. 
 
