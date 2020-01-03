@@ -52,7 +52,7 @@ Lembrando que você precisa adicionar os animes pela barra de admin (.../Admin)
 ![](https://media.giphy.com/media/dvI2rHjyL0Yu90licj/giphy.gif)
 
 
-##Caso esteja tendo bug no projeto, tenho duas soluções para você ali na Wiki, dê uma olhada ;)
+## Caso esteja tendo bug no projeto, tenho duas soluções para você ali na Wiki, dê uma olhada ;)
 
    
  
