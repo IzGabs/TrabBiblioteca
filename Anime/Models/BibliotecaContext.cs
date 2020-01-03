@@ -11,7 +11,7 @@ namespace Anime.DAO
     public class BibliotecaContext : DbContext
     {
         //Criei a context de anime, episodio, temporada, categoria. Assim, vai ser criado uma tabela para todos. 
-        public BibliotecaContext() : base("AnimeBanco") { }
+        public BibliotecaContext() : base("AnimeBancoM") { }
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Episodio> Episodios { get; set; }
         public DbSet<Temporada> Temporadas { get; set; }
